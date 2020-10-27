@@ -177,9 +177,7 @@ async def mention_afk(mention):
             if mention.sender_id not in USERS:
                 if AFKREASON:
                     await mention.reply(
-                        f"My Master Is Offline! 
-                        \n Since {afk_since}.\
-                        \n Please Wait Until He Reply
+                        f"I'm AFK since {afk_since}.\
                         \nReason: `{AFKREASON}`"
                     )
                 else:
@@ -190,10 +188,8 @@ async def mention_afk(mention):
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await mention.reply(
-                            f"My Master Still Offline! 
-                        \n Since {afk_since}.\
-                        \n Please Wait Until He Reply
-                        \nReason: `{AFKREASON}`"
+                            f"I'm still AFK since {afk_since}.\
+                            \nReason: `{AFKREASON}`"
                         )
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -265,9 +261,7 @@ async def afk_on_pm(sender):
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(
-                        f"My Master Is Offline! 
-                        \n Since {afk_since}.\
-                        \n Please Wait Until He Reply
+                        f"I'm AFK since {afk_since}.\
                         \nReason: `{AFKREASON}`"
                     )
                 else:
@@ -278,10 +272,8 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await sender.reply(
-                            f"My Master Still Offline! 
-                        \n Since {afk_since}.\
-                        \n Please Wait Until He Reply
-                        \nReason: `{AFKREASON}`"
+                            f"I'm still AFK since {afk_since}.\
+                            \nReason: `{AFKREASON}`"
                         )
                     else:
                         await sender.reply(str(choice(AFKSTR)))
